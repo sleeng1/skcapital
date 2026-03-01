@@ -100,7 +100,7 @@ img {
 .hero {
     position: relative;
     height: 100vh;
-    background: url("/image/kartinka.svg") center center / cover no-repeat;
+    background: url("../image/kartinka.svg") center center / cover no-repeat;
 }
 
 /* текст поверх */
