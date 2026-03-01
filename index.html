@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СК-Капитал</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+<div id="header"></div>
+<main class="page-content">
+<section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+        <h1>Всем привет!</h1>
+        <h4>Текст снизу lelelele</h4>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="features-head">
+            <h2>Features</h2>
+            <p>
+                Most calendars are designed for teams.<br>
+                Slate is designed for freelancers
+            </p>
+        </div>
+
+        <div class="features-list">
+            <div class="feature">
+                <h4>OpenType features Variable fonts</h4>
+                <p>Slate helps you see how many more days you need.</p>
+            </div>
+            <div class="feature">
+                <h4>Design with real data</h4>
+                <p>Slate helps you see how many more days you need.</p>
+            </div>
+            <div class="feature">
+                <h4>Fastest way to take action</h4>
+                <p>Slate helps you see how many more days you need.</p>
+            </div>
+        </div>
+
+        <div class="features-image">
+            <img src="image/kartinka.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <div class="container why-inner">
+        <div class="why-text">
+            <h2>Why choose us</h2>
+            <p class="lead">Simple, transparent and focused on real results.</p>
+
+            <ul class="why-list">
+                <li>
+                    <strong>Clear strategy</strong>
+                    <span>We focus on measurable results.</span>
+                </li>
+                <li>
+                    <strong>Real analytics</strong>
+                    <span>All decisions are based on data.</span>
+                </li>
+                <li>
+                    <strong>Fast communication</strong>
+                    <span>No bureaucracy or long waits.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="why-image">
+            <img src="image/kartinka.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+
+        <div class="contact-head">
+            <h2>Связь с нами</h2>
+            <p>
+                Most calendars are designed for teams.<br>
+                Slate is designed for freelancers
+            </p>
+        </div>
+
+        <div class="contact-inner">
+
+            <div class="contact-form">
+                <h3>Отправить сообщение</h3>
+
+                <form id="tg-form">
+                    <input type="text" name="name" placeholder="Твое имя" required>
+                    <input type="email" name="email" placeholder="Твоя почта" required>
+                    <textarea name="message" placeholder="Твое сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-items">
+                    <div class="info">
+                        <span>📍</span>
+                        <p>Промышленная ул., 117, лит.О, Пермь</p>
+                    </div>
+                    <div class="info">
+                        <span>📞</span>
+                        <p>+79194893980</p>
+                    </div>
+                    <div class="info">
+                        <span>✉️</span>
+                        <p>sleeng123123@example.com</p>
+                    </div>
+                </div>
+
+                <div class="map">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/org/sk_kapital/30673447617/?ll=56.164177%2C57.920943&z=17"
+                        width="100%"
+                        height="300"
+                        frameborder="0">
+                    </iframe>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://t.me/sleeng1" target="_blank" rel="noopener">
+                        <img src="image/tgblue.svg" alt="Telegram">
+                    </a>
+                    <a href="tel:+79194893980">
+                        <img src="image/phonegreen.svg" alt="Телефон">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+</main>
+</body>
+</html>

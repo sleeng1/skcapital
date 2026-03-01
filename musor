@@ -1,0 +1,29 @@
+<header class="header">
+    <div class="content_container">
+        <a href="#" class="logo">СК-Капитал</a>
+
+        <nav class="main-nav">
+            <ul>
+                <li class="item-selected"><a href="#">Главная</a></li>
+                <li><a href="uslugi.html" class="item">Услуги</a></li>
+                <li><a href="#" class="item">О компании</a></li>
+                <li><a href="#" class="item">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <ul class="actions">
+            <li>
+                <a href="https://t.me/sleeng1" target="_blank" rel="noopener">
+                    <img src="image/tgblue.svg" alt="Telegram">
+                </a>
+            </li>
+            <li>
+                <a href="tel:+79194893980">
+                    <img src="image/phonegreen.svg" alt="Телефон">
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+шапка старая

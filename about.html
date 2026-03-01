@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О компании | СК-Капитал</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+        background-color: brown;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<main class="page-content">
+<section style="margin-top:120px; padding:100px; text-align:center;">
+    <h1>Страница о компании</h1>
+    <p>Здесь будет информация о компании</p>
+</section>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+</main>
+
+</body>
+</html>
