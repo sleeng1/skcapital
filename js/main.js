@@ -1,35 +1,28 @@
-document.getElementById("tg-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // предотвращаем стандартную отправку
+const form = document.getElementById("tg-form");
+const status = document.getElementById("form-status");
 
-    const token = "8291398458:AAESy8Rfq82b1FbmFfrv0XsN4PF-YITHRWA";
-    const chat_id = "873329592";
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    const name = this.name.value;
-    const email = this.email.value;
-    const message = this.message.value;
+    const formData = new FormData(form);
 
-    const text = `Новое сообщение с сайта:\nИмя: ${name}\nEmail: ${email}\nСообщение: ${message}`;
-
-    // Отправка через fetch
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    fetch("send.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            chat_id: chat_id,
-            text: text
-        })
+        body: formData
     })
     .then(response => response.json())
     .then(data => {
-        if(data.ok){
-            alert("Сообщение отправлено!");
-            document.getElementById("tg-form").reset();
+
+        if (data.success) {
+            status.innerText = "Сообщение отправлено!";
+            form.reset();
         } else {
-            alert("Ошибка при отправке!");
+            status.innerText = "Ошибка отправки.";
         }
+
     })
     .catch(error => {
+        status.innerText = "Ошибка сервера.";
         console.error(error);
-        alert("Ошибка при отправке!");
     });
 });
